@@ -10,6 +10,13 @@
         android:layout_height="wrap_content">
 
         <Button
+            android:id="@+camera/takePhoto"
+            android:text="Take Photo"
+            android:enabled="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+        <Button
             android:id="@+camera/selectCamera"
             android:text="Camera"
             android:enabled="false"
@@ -32,10 +39,7 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
             />
-<TextView  
-    android:layout_width="fill_parent" 
-    android:layout_height="wrap_content" 
-    android:text="Hello World, TakePhoto"
-    />
+
+
 </LinearLayout>
 
