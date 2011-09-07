@@ -11,25 +11,42 @@ public final class R {
     public static final class attr {
     }
     public static final class camera {
-        public static final int selectCamera=0x7f050001;
-        public static final int selectReview=0x7f050002;
-        public static final int surface=0x7f050003;
-        public static final int takePhoto=0x7f050000;
+        public static final int photos=0x7f070001;
+        public static final int previousPhotos=0x7f070003;
+        public static final int primaryImage=0x7f070002;
+        public static final int surface=0x7f070000;
+        public static final int takePhoto=0x7f070004;
     }
     public static final class drawable {
         public static final int icon=0x7f020000;
     }
     public static final class layout {
-        public static final int main=0x7f030000;
-        public static final int photo_review=0x7f030001;
+        public static final int review_picture=0x7f030000;
+        public static final int side_image_view=0x7f030001;
+        public static final int take_picture=0x7f030002;
+        public static final int view_picture=0x7f030003;
     }
     public static final class photoReview {
-        public static final int greenButton=0x7f060003;
-        public static final int imageView=0x7f060000;
-        public static final int redButton=0x7f060001;
-        public static final int yellowButton=0x7f060002;
+        public static final int bored=0x7f050004;
+        public static final int hungry=0x7f050002;
+        public static final int imageView=0x7f050000;
+        public static final int preemptive=0x7f050003;
+        public static final int rating=0x7f050001;
+        public static final int retake=0x7f050006;
+        public static final int save=0x7f050007;
+        public static final int tired=0x7f050005;
+    }
+    public static final class side_image_view {
+        public static final int image=0x7f060000;
     }
     public static final class string {
         public static final int app_name=0x7f040000;
+    }
+    public static final class viewPicture {
+        public static final int delete=0x7f080004;
+        public static final int imageView=0x7f080000;
+        public static final int rating=0x7f080003;
+        public static final int ratingLabel=0x7f080002;
+        public static final int time=0x7f080001;
     }
 }

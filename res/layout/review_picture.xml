@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent">
+
+  <ImageView
+      android:layout_width="200dp"
+      android:layout_height="200dp"
+      android:id="@+photoReview/imageView"/>
+
+  <TextView
+      android:text="Pick the option that describes how you feel"
+      android:layout_height="wrap_content"
+      android:layout_width="wrap_content"
+      android:textStyle="bold"
+      />
+
+  <RadioGroup
+      android:id="@+photoReview/rating"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content">
+    <RadioButton
+        android:id="@+photoReview/hungry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="I'm really hungry"
+        android:checked="false"
+        />
+
+    <RadioButton
+        android:id="@+photoReview/preemptive"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="I think I'm about to be hungry"
+        android:checked="false"
+        />
+
+    <RadioButton
+        android:id="@+photoReview/bored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="I'm bored or sick of work"
+        android:checked="false"
+        />
+
+    <RadioButton
+        android:id="@+photoReview/tired"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="I'm tired"
+        android:checked="false"
+        />
+
+  </RadioGroup>
+
+  <LinearLayout
+      android:layout_height="wrap_content"
+      android:layout_width="wrap_content"
+      android:orientation="horizontal"
+      >
+    <Button
+        android:id="@+photoReview/retake"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="Retake Photo"
+        />
+
+    <Button
+        android:id="@+photoReview/save"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="Save"
+        />
+  </LinearLayout>
+</LinearLayout>
