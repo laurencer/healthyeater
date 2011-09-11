@@ -3,65 +3,117 @@
               android:layout_width="fill_parent"
               android:layout_height="fill_parent"
               android:orientation="vertical"
+              android:background="@drawable/light_pattern"
     >
 
   <FrameLayout
-      android:background="@android:color/white"
-      android:layout_gravity="center_horizontal"
-      android:layout_width="200dp"
-      android:layout_height="200dp"
-      android:padding="10dp">
-  <SurfaceView
-      android:id="@+camera/surface"
+      android:layout_width="fill_parent"
+      android:layout_height="45dp"
+      android:background="@drawable/navigation_background"
+      >
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:text="Food Journal (Today)"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        />
+
+  </FrameLayout>
+
+  <ImageView
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:src="@drawable/navigation_border_top"
+    android:scaleType="fitXY"
+    />
+
+  <RelativeLayout
+      android:layout_width="fill_parent"
+      android:layout_height="140dp"
+      android:background="@drawable/dark_pattern"
+      >
+    <com.rouesnel.common.ui.HorizontalListView
+        android:id="@+camera/pictureGallery"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        
+        android:layout_width="fill_parent"
+        android:layout_height="140dp"
+        android:paddingLeft="8dp"
+        android:paddingTop="8dp"
+        android:background="@android:color/transparent"
+        />
+
+    <TextView
       android:layout_width="fill_parent"
       android:layout_height="fill_parent"
-      android:layout_gravity="center_horizontal"
+      android:gravity="center"
+      android:textColor="@android:color/white"
+      android:id="@+camera/noFoodText"
+      android:text="You haven't eaten anything today."
+      android:textSize="18sp"
+      android:shadowColor="#000000"
+      android:shadowDx="0"
+      android:shadowDy="0"
+      android:shadowRadius="2"
+      android:visibility="invisible"
       />
 
-  </FrameLayout>
+  </RelativeLayout>
+
+  <ImageView
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:src="@drawable/navigation_border_bottom"
+    android:scaleType="fitXY"
+    />
 
   <LinearLayout
-      android:id="@+camera/photos"
-      android:orientation="horizontal"
       android:layout_width="fill_parent"
       android:layout_height="wrap_content"
-      android:padding="5dp">
+      android:orientation="vertical"
 
-    <ImageView
-        android:layout_width="160dp"
-        android:layout_height="160dp"
-        android:padding="10dp"
-        android:background="@android:color/white"
-        android:id="@+camera/primaryImage"/>
+      >
 
-    <GridView
-        android:id="@+camera/previousPhotos"
-        android:numColumns="2"
-        android:padding="0dp"
-        android:verticalSpacing="0dp"
-        android:horizontalSpacing="0dp"
-        android:columnWidth="80dp"
-        android:gravity="fill"
-        android:layout_width="160dp"
-        android:layout_height="160dp"
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:text="Tap the photo to take a picture"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@android:color/black"
+        android:gravity="center"
+        android:paddingTop="13dp"
+        android:paddingBottom="10dp"
+        android:textSize="16sp"
         />
+
+    <FrameLayout
+        android:layout_height="225dp"
+        android:layout_width="300dp"
+        android:layout_gravity="center_horizontal"
+        android:padding="1dp"
+        android:background="#dad7d4"
+        >
+      <FrameLayout
+          android:layout_height="fill_parent"
+          android:layout_width="fill_parent"
+          android:layout_gravity="center_horizontal"
+          android:padding="14dp"
+          android:background="@android:color/white"
+          >
+        <SurfaceView
+            android:id="@+camera/surface"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center_horizontal"
+            />
+      </FrameLayout>
+    </FrameLayout>
 
   </LinearLayout>
-
-  <FrameLayout
-      android:layout_width="fill_parent"
-      android:layout_height="wrap_content">
-
-    <Button
-        android:id="@+camera/takePhoto"
-        android:text="Take Photo"
-        android:enabled="true"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        />
-
-  </FrameLayout>
-
 </LinearLayout>
 

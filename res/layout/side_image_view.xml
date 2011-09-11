@@ -1,12 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:layout_width="fill_parent"
-              android:layout_height="fill_parent"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="124dp"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center"
+              android:padding="1dp"
+              android:background="#bebcb9">
+  <FrameLayout
+              android:layout_width="122dp"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center"
               android:padding="5dp"
               android:background="@android:color/white">
-  <ImageView android:layout_height="70dp"
-             android:layout_width="70dp"
-             android:id="@+side_image_view/image"/>
-
-</LinearLayout>
+  <LinearLayout
+      android:layout_height="wrap_content"
+      android:layout_width="wrap_content"
+      android:orientation="vertical"
+      android:layout_gravity="center">
+    <ImageView android:layout_height="84dp"
+               android:layout_width="112dp"
+               android:layout_gravity="center"
+               android:scaleType="fitXY"
+               android:id="@+side_image_view/image"/>
+    <TextView
+        android:id="@+side_image_view/time"
+      android:layout_height="wrap_content"
+      android:layout_width="fill_parent"
+      android:paddingTop="3dp"
+      android:gravity="center"
+      android:text="3 hours ago"
+      android:textColor="#82807e"
+      android:textSize="12sp" />
+  </LinearLayout>
+</FrameLayout></FrameLayout>

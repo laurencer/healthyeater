@@ -11,14 +11,17 @@ public final class R {
     public static final class attr {
     }
     public static final class camera {
-        public static final int photos=0x7f070001;
-        public static final int previousPhotos=0x7f070003;
-        public static final int primaryImage=0x7f070002;
-        public static final int surface=0x7f070000;
-        public static final int takePhoto=0x7f070004;
+        public static final int noFoodText=0x7f070001;
+        public static final int pictureGallery=0x7f070000;
+        public static final int surface=0x7f070002;
     }
     public static final class drawable {
-        public static final int icon=0x7f020000;
+        public static final int dark_pattern=0x7f020000;
+        public static final int icon=0x7f020001;
+        public static final int light_pattern=0x7f020002;
+        public static final int navigation_background=0x7f020003;
+        public static final int navigation_border_bottom=0x7f020004;
+        public static final int navigation_border_top=0x7f020005;
     }
     public static final class layout {
         public static final int review_picture=0x7f030000;
@@ -33,11 +36,11 @@ public final class R {
         public static final int preemptive=0x7f050003;
         public static final int rating=0x7f050001;
         public static final int retake=0x7f050006;
-        public static final int save=0x7f050007;
         public static final int tired=0x7f050005;
     }
     public static final class side_image_view {
         public static final int image=0x7f060000;
+        public static final int time=0x7f060001;
     }
     public static final class string {
         public static final int app_name=0x7f040000;

@@ -9,10 +9,13 @@ import android.database.sqlite.SQLiteStatement;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Environment;
+import android.text.format.DateUtils;
 import android.util.AndroidRuntimeException;
+import android.util.TimeUtils;
 import android.widget.RatingBar;
 
 import java.io.*;
+import java.sql.Time;
 import java.text.DateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -132,6 +135,20 @@ public class Model {
 
       model.close();
 
+    }
+
+    public String getTimeAgo() {
+      Date date = getDateTaken();
+      Date now = new Date();
+      long timespan = (now.getTime() - date.getTime());
+      long hours = timespan / (1000 * 60 * 60);
+      if (hours < 1) {
+        return "within an hour";
+      } else if (hours == 1) {
+        return "1 hour ago";
+      } else {
+        return String.valueOf(hours) + " hours ago";
+      }
     }
 
     public void delete() {

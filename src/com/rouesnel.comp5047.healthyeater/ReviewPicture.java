@@ -27,24 +27,16 @@ public class ReviewPicture extends Activity {
   private RadioGroup.OnCheckedChangeListener onRatingChange = new
       RadioGroup.OnCheckedChangeListener() {
         public void onCheckedChanged(RadioGroup radioGroup, int buttonId) {
-          RadioButton button = (RadioButton)findViewById(buttonId);
-          String rating = button.getText().toString();
-          picture.setRating(rating);
+          if (buttonId == R.photoReview.retake) {
+            picture.retake();
+          } else {
+            RadioButton button = (RadioButton)findViewById(buttonId);
+            String rating = button.getText().toString();
+            picture.setRating(rating);
+          }
+          finish();
         }
       };
-
-  private Button.OnClickListener onSaveClick = new Button.OnClickListener() {
-    public void onClick(View view) {
-      finish();
-    }
-  };
-
-  private Button.OnClickListener onRetakeClick = new Button.OnClickListener() {
-    public void onClick(View view) {
-      picture.retake();
-      finish();
-    }
-  };
 
   public void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
@@ -53,8 +45,6 @@ public class ReviewPicture extends Activity {
     // Get the views.
     displayView = (ImageView)findViewById(R.photoReview.imageView);
     ratingOptions = (RadioGroup)findViewById(R.photoReview.rating);
-    retakePicture = (Button)findViewById(R.photoReview.retake);
-    savePicture = (Button)findViewById(R.photoReview.save);
 
     // Grab picture from the database.
     pictureId = getIntent().getLongExtra(TakePicture.PHOTO_ID, 0);
@@ -63,8 +53,6 @@ public class ReviewPicture extends Activity {
 
     // Set up click listeners
     ratingOptions.setOnCheckedChangeListener(onRatingChange);
-    retakePicture.setOnClickListener(onRetakeClick);
-    savePicture.setOnClickListener(onSaveClick);
 
     // Initialize the display and controls.
     displayView.setImageBitmap(picture.getBitmap());

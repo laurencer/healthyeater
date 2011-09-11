@@ -19,22 +19,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0b2c6a14-8235-456f-a805-5113dc827657" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/projectCodeStyle.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/review_picture.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/side_image_view.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/take_picture.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/view_picture.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/rouesnel.comp5047.healthyeater/ReviewPicture.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/rouesnel.comp5047.healthyeater/TakePicture.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/rouesnel.comp5047.healthyeater/ViewPicture.java" />
-      <change type="DELETED" beforePath="C:\Users\Laurence Rouesnel\workspace\HealthyEater\res\layout\main.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Laurence Rouesnel\workspace\HealthyEater\res\layout\photo_review.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Laurence Rouesnel\workspace\HealthyEater\src\com\rouesnel.comp5047.healthyeater\ReviewPhoto.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Laurence Rouesnel\workspace\HealthyEater\src\com\rouesnel.comp5047.healthyeater\TakePhoto.java" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/dark_pattern.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/light_pattern.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/navigation_background.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/navigation_border_bottom.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/navigation_border_top.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/rouesnel/common.ui/HorizontalListView.java" />
+      <change type="DELETED" beforePath="C:\Users\Laurence Rouesnel\workspace\HealthyEater\res\drawable-hdpi\icon.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Laurence Rouesnel\workspace\HealthyEater\res\drawable-ldpi\icon.png" afterPath="" />
+      <change type="MOVED" beforePath="C:\Users\Laurence Rouesnel\workspace\HealthyEater\res\drawable-mdpi\icon.png" afterPath="$PROJECT_DIR$/res/drawable/icon.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AndroidManifest.xml" afterPath="$PROJECT_DIR$/AndroidManifest.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gen/com/rouesnel/comp5047/healthyeater/R.java" afterPath="$PROJECT_DIR$/gen/com/rouesnel/comp5047/healthyeater/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/review_picture.xml" afterPath="$PROJECT_DIR$/res/layout/review_picture.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/side_image_view.xml" afterPath="$PROJECT_DIR$/res/layout/side_image_view.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/take_picture.xml" afterPath="$PROJECT_DIR$/res/layout/take_picture.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/rouesnel.comp5047.healthyeater/Model.java" afterPath="$PROJECT_DIR$/src/com/rouesnel.comp5047.healthyeater/Model.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/rouesnel.comp5047.healthyeater/ReviewPicture.java" afterPath="$PROJECT_DIR$/src/com/rouesnel.comp5047.healthyeater/ReviewPicture.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/rouesnel.comp5047.healthyeater/TakePicture.java" afterPath="$PROJECT_DIR$/src/com/rouesnel.comp5047.healthyeater/TakePicture.java" />
     </list>
     <ignored path="HealthyEater.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -98,10 +101,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="take_picture.xml" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="take_picture.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/res/layout/take_picture.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="28" selection-start="1226" selection-end="1226" vertical-scroll-proportion="0.74244124">
+            <state line="45" column="31" selection-start="1431" selection-end="1431" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HorizontalListView.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/rouesnel/common.ui/HorizontalListView.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="44" column="13" selection-start="1692" selection-end="1692" vertical-scroll-proportion="-3.940037">
               <folding />
             </state>
           </provider>
@@ -110,7 +122,7 @@
       <file leaf-file-name="side_image_view.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/res/layout/side_image_view.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="36" selection-start="383" selection-end="383" vertical-scroll-proportion="0.0">
+            <state line="25" column="19" selection-start="1020" selection-end="1020" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -119,7 +131,7 @@
       <file leaf-file-name="AndroidManifest.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="0" selection-start="1125" selection-end="1125" vertical-scroll-proportion="0.0">
+            <state line="14" column="48" selection-start="697" selection-end="746" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -128,26 +140,8 @@
       <file leaf-file-name="Model.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/rouesnel.comp5047.healthyeater/Model.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="142" column="5" selection-start="3476" selection-end="3476" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="class#DatabaseOpener#0;class#Model#0" expanded="false" />
-                <element signature="method#Picture#0;class#Picture#0;class#Model#0" expanded="false" />
-                <element signature="method#getFile#0;class#Picture#0;class#Model#0" expanded="false" />
-                <element signature="method#getBytes#0;class#Picture#0;class#Model#0" expanded="false" />
-                <element signature="method#getBitmap#0;class#Picture#0;class#Model#0" expanded="false" />
-                <element signature="method#getId#0;class#Picture#0;class#Model#0" expanded="false" />
-                <element signature="method#getRating#0;class#Picture#0;class#Model#0" expanded="false" />
-                <element signature="method#setRating#0;class#Picture#0;class#Model#0" expanded="false" />
-                <element signature="method#close#0;class#Model#0" expanded="false" />
-                <element signature="method#open#0;class#Model#0" expanded="false" />
-                <element signature="method#getToday#0;class#Model#0" expanded="false" />
-                <element signature="method#getTodaysPictures#0;class#Model#0" expanded="false" />
-                <element signature="method#storePicture#0;class#Model#0" expanded="false" />
-                <element signature="method#getPicture#0;class#Model#0" expanded="false" />
-                <element signature="method#deletePicture#0;class#Model#0" expanded="false" />
-                <element signature="method#getPictureTime#0;class#Model#0" expanded="false" />
-                <element signature="method#ratePicture#0;class#Model#0" expanded="false" />
-              </folding>
+            <state line="149" column="52" selection-start="3844" selection-end="3844" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -155,7 +149,7 @@
       <file leaf-file-name="ReviewPicture.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/rouesnel.comp5047.healthyeater/ReviewPicture.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="39" selection-start="1348" selection-end="1348" vertical-scroll-proportion="0.0">
+            <state line="36" column="19" selection-start="1061" selection-end="1061" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -173,7 +167,7 @@
       <file leaf-file-name="view_picture.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/res/layout/view_picture.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="6" selection-start="1115" selection-end="1115" vertical-scroll-proportion="0.0">
+            <state line="7" column="29" selection-start="300" selection-end="301" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -182,7 +176,7 @@
       <file leaf-file-name="review_picture.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/res/layout/review_picture.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="23" selection-start="629" selection-end="629" vertical-scroll-proportion="0.0">
+            <state line="20" column="26" selection-start="724" selection-end="724" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -191,13 +185,9 @@
       <file leaf-file-name="TakePicture.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/rouesnel.comp5047.healthyeater/TakePicture.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="116" column="3" selection-start="3717" selection-end="3717" vertical-scroll-proportion="-40.6">
+            <state line="29" column="18" selection-start="867" selection-end="867" vertical-scroll-proportion="0.0">
               <folding>
-                <element signature="class#PictureAdapter#0;class#TakePicture#0" expanded="false" />
-                <element signature="method#getView#0;class#PictureAdapter#0;class#TakePicture#0" expanded="false" />
-                <element signature="method#setDisplayOrientation#0;class#TakePicture#0" expanded="false" />
-                <element signature="method#surfaceCreated#0;class#TakePicture#0" expanded="false" />
-                <element signature="method#surfaceChanged#0;class#TakePicture#0" expanded="false" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -217,22 +207,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/com/rouesnel.comp5047.healthyeater/DatabaseOpenHelper.java" />
-        <option value="$PROJECT_DIR$/res/layout/main.xml" />
-        <option value="$PROJECT_DIR$/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/res/drawable-mdpi/camera_button.xml" />
         <option value="$PROJECT_DIR$/res/values/styles.xml" />
         <option value="$PROJECT_DIR$/res/layout/take_photo.xml" />
         <option value="$PROJECT_DIR$/src/com/rouesnel.comp5047.healthyeater/ReviewPhoto.java" />
         <option value="$PROJECT_DIR$/res/layout/photo_review.xml" />
         <option value="$PROJECT_DIR$/src/com/rouesnel.comp5047.healthyeater/TakePhoto.java" />
+        <option value="$PROJECT_DIR$/src/com/rouesnel.comp5047.healthyeater/ViewPicture.java" />
         <option value="$PROJECT_DIR$/src/com/rouesnel.comp5047.healthyeater/ReviewPicture.java" />
         <option value="$PROJECT_DIR$/res/layout/view_picture.xml" />
-        <option value="$PROJECT_DIR$/src/com/rouesnel.comp5047.healthyeater/Model.java" />
-        <option value="$PROJECT_DIR$/src/com/rouesnel.comp5047.healthyeater/ViewPicture.java" />
-        <option value="$PROJECT_DIR$/src/com/rouesnel.comp5047.healthyeater/TakePicture.java" />
-        <option value="$PROJECT_DIR$/res/layout/side_image_view.xml" />
+        <option value="$PROJECT_DIR$/res/layout/review_picture.xml" />
+        <option value="$PROJECT_DIR$/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/src/com/rouesnel/common/HorizontalListView.java" />
+        <option value="$PROJECT_DIR$/src/com/rouesnel/common.ui/HorizontalListView.java" />
         <option value="$PROJECT_DIR$/res/layout/take_picture.xml" />
+        <option value="$PROJECT_DIR$/res/layout/side_image_view.xml" />
+        <option value="$PROJECT_DIR$/src/com/rouesnel.comp5047.healthyeater/Model.java" />
+        <option value="$PROJECT_DIR$/src/com/rouesnel.comp5047.healthyeater/TakePicture.java" />
       </list>
     </option>
   </component>
@@ -294,9 +284,8 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Favorites" />
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -329,7 +318,29 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="rouesnel.comp5047.healthyeater" />
+              <option name="myItemId" value="com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HealthyEater" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HealthyEater" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="common.ui" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -344,6 +355,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="values" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -379,48 +394,13 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="drawable-mdpi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HealthyEater" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HealthyEater" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="drawable-ldpi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HealthyEater" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HealthyEater" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="drawable-hdpi" />
+              <option name="myItemId" value="drawable" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -439,13 +419,15 @@
     <property name="AndroidTargetDevices" value="37C704640605057" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Laurence Rouesnel\workspace\HealthyEater\res\drawable" />
       <recent name="C:\Users\Laurence Rouesnel\workspace\HealthyEater\res\drawable-hdpi" />
       <recent name="C:\Users\Laurence Rouesnel\workspace\HealthyEater\res\drawable-ldpi" />
+      <recent name="C:\Users\Laurence Rouesnel\workspace\HealthyEater\res\drawable-mdpi" />
     </key>
   </component>
   <component name="RunManager" selected="Android Application.HealthyEater">
@@ -472,19 +454,6 @@
         <option name="PhingTarget" enabled="false" />
       </method>
     </configuration>
-    <configuration default="true" type="Remote" factoryName="Remote">
-      <option name="USE_SOCKET_TRANSPORT" value="true" />
-      <option name="SERVER_MODE" value="false" />
-      <option name="SHMEM_ADDRESS" value="javadebug" />
-      <option name="HOST" value="localhost" />
-      <option name="PORT" value="5005" />
-      <method>
-        <option name="AntTarget" enabled="false" />
-        <option name="BuildArtifacts" enabled="false" />
-        <option name="Maven.BeforeRunTask" enabled="false" />
-        <option name="PhingTarget" enabled="false" />
-      </method>
-    </configuration>
     <configuration default="true" type="Specs2RunConfiguration" factoryName="Specs2">
       <module name="" />
       <setting name="path" value="" />
@@ -500,11 +469,15 @@
         <option name="PhingTarget" enabled="false" />
       </method>
     </configuration>
-    <configuration default="true" type="FlexUnitRunConfigurationType" factoryName="FlexUnit" adl_options="" air_descriptor_path="" air_program_params="" air_publisher_id="" air_root_dir_path="" air_run_mode="AppDescriptor" browser_family="FIREFOX" class_name="" debugger_sdk="Module SDK" html_or_swf_file_path="" launcher_type="OSDefault" main_class_name="" method_name="" module_name="" output_log_level="" package_name="" player_path="FlashPlayer.exe" port="0" run_mode="HtmlOrSwfFile" run_trusted="false" scope="Class" socket_policy_port="0" url_to_launch="http://">
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
       <method>
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
-        <option name="Make" enabled="true" />
         <option name="Maven.BeforeRunTask" enabled="false" />
         <option name="PhingTarget" enabled="false" />
       </method>
@@ -518,6 +491,15 @@
       <setting name="workingDirectory" value="$PROJECT_DIR$" />
       <setting name="sysFilter" value=".*" />
       <setting name="exampleFilter" value=".*" />
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Make" enabled="true" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+        <option name="PhingTarget" enabled="false" />
+      </method>
+    </configuration>
+    <configuration default="true" type="FlexUnitRunConfigurationType" factoryName="FlexUnit" adl_options="" air_descriptor_path="" air_program_params="" air_publisher_id="" air_root_dir_path="" air_run_mode="AppDescriptor" browser_family="FIREFOX" class_name="" debugger_sdk="Module SDK" html_or_swf_file_path="" launcher_type="OSDefault" main_class_name="" method_name="" module_name="" output_log_level="" package_name="" player_path="FlashPlayer.exe" port="0" run_mode="HtmlOrSwfFile" run_trusted="false" scope="Class" socket_policy_port="0" url_to_launch="http://">
       <method>
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
@@ -593,6 +575,22 @@
         <option name="PhingTarget" enabled="false" />
       </method>
     </configuration>
+    <configuration default="true" type="ScalaTestRunConfiguration" factoryName="ScalaTest">
+      <module name="" />
+      <setting name="path" value="" />
+      <setting name="package" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="version" value="false" />
+      <setting name="workingDirectory" value="$PROJECT_DIR$" />
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Make" enabled="true" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+        <option name="PhingTarget" enabled="false" />
+      </method>
+    </configuration>
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
       <module name="" />
       <option name="ACTIVITY_CLASS" value="" />
@@ -606,22 +604,6 @@
       <option name="NETWORK_SPEED" value="full" />
       <option name="NETWORK_LATENCY" value="none" />
       <option name="CLEAR_LOGCAT" value="false" />
-      <method>
-        <option name="AntTarget" enabled="false" />
-        <option name="BuildArtifacts" enabled="false" />
-        <option name="Make" enabled="true" />
-        <option name="Maven.BeforeRunTask" enabled="false" />
-        <option name="PhingTarget" enabled="false" />
-      </method>
-    </configuration>
-    <configuration default="true" type="ScalaTestRunConfiguration" factoryName="ScalaTest">
-      <module name="" />
-      <setting name="path" value="" />
-      <setting name="package" value="" />
-      <setting name="vmparams" value="" />
-      <setting name="params" value="" />
-      <setting name="version" value="false" />
-      <setting name="workingDirectory" value="$PROJECT_DIR$" />
       <method>
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
@@ -685,8 +667,8 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1112" y="40" width="1448" height="1560" extended-state="0" />
-    <editor active="false" />
+    <frame x="1280" y="40" width="1280" height="1560" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Phing Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295082" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -696,18 +678,18 @@
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295082" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33333334" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33333334" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295082" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14697406" sideWeight="0.6666667" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18834399" sideWeight="0.0" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33032787" sideWeight="0.811656" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18834399" sideWeight="0.0" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Android Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39587775" sideWeight="0.4967213" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977968" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32906893" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Android Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.14476459" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
@@ -761,11 +743,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Android/android-sdk/platforms/android-10/android.jar!/android/os/Looper.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="16" selection-start="794" selection-end="794" vertical-scroll-proportion="0.48875" />
-      </provider>
-    </entry>
     <entry file="jar://C:/Android/android-sdk/platforms/android-10/android.jar!/android/view/ViewTreeObserver.class">
       <provider selected="true" editor-type-id="text-editor">
         <state line="33" column="25" selection-start="1753" selection-end="1753" vertical-scroll-proportion="0.33291924" />
@@ -796,89 +773,64 @@
         <state line="17" column="14" selection-start="583" selection-end="583" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="48" selection-start="697" selection-end="746" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/rouesnel.comp5047.healthyeater/ReviewPicture.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="39" selection-start="1348" selection-end="1348" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/rouesnel.comp5047.healthyeater/TakePicture.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="116" column="3" selection-start="3717" selection-end="3717" vertical-scroll-proportion="-40.6">
-          <folding>
-            <element signature="class#PictureAdapter#0;class#TakePicture#0" expanded="false" />
-            <element signature="method#getView#0;class#PictureAdapter#0;class#TakePicture#0" expanded="false" />
-            <element signature="method#setDisplayOrientation#0;class#TakePicture#0" expanded="false" />
-            <element signature="method#surfaceCreated#0;class#TakePicture#0" expanded="false" />
-            <element signature="method#surfaceChanged#0;class#TakePicture#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/review_picture.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="23" selection-start="629" selection-end="629" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/view_picture.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="6" selection-start="1115" selection-end="1115" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="36" column="19" selection-start="1061" selection-end="1061" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/rouesnel.comp5047.healthyeater/ViewPicture.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="74" selection-start="1534" selection-end="1534" vertical-scroll-proportion="0.0">
+        <state line="49" column="74" selection-start="1534" selection-end="1534" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/take_picture.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="31" selection-start="1431" selection-end="1431" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/side_image_view.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="19" selection-start="1020" selection-end="1020" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/rouesnel.comp5047.healthyeater/Model.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="142" column="5" selection-start="3476" selection-end="3476" vertical-scroll-proportion="0.0">
+        <state line="149" column="52" selection-start="3844" selection-end="3844" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/view_picture.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="29" selection-start="300" selection-end="301" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/review_picture.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="26" selection-start="724" selection-end="724" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/rouesnel.comp5047.healthyeater/TakePicture.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="18" selection-start="867" selection-end="867" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="class#DatabaseOpener#0;class#Model#0" expanded="false" />
-            <element signature="method#Picture#0;class#Picture#0;class#Model#0" expanded="false" />
-            <element signature="method#getFile#0;class#Picture#0;class#Model#0" expanded="false" />
-            <element signature="method#getBytes#0;class#Picture#0;class#Model#0" expanded="false" />
-            <element signature="method#getBitmap#0;class#Picture#0;class#Model#0" expanded="false" />
-            <element signature="method#getId#0;class#Picture#0;class#Model#0" expanded="false" />
-            <element signature="method#getRating#0;class#Picture#0;class#Model#0" expanded="false" />
-            <element signature="method#setRating#0;class#Picture#0;class#Model#0" expanded="false" />
-            <element signature="method#close#0;class#Model#0" expanded="false" />
-            <element signature="method#open#0;class#Model#0" expanded="false" />
-            <element signature="method#getToday#0;class#Model#0" expanded="false" />
-            <element signature="method#getTodaysPictures#0;class#Model#0" expanded="false" />
-            <element signature="method#storePicture#0;class#Model#0" expanded="false" />
-            <element signature="method#getPicture#0;class#Model#0" expanded="false" />
-            <element signature="method#deletePicture#0;class#Model#0" expanded="false" />
-            <element signature="method#getPictureTime#0;class#Model#0" expanded="false" />
-            <element signature="method#ratePicture#0;class#Model#0" expanded="false" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/side_image_view.xml">
+    <entry file="file://$PROJECT_DIR$/src/com/rouesnel/common.ui/HorizontalListView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="36" selection-start="383" selection-end="383" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="0" selection-start="1125" selection-end="1125" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/take_picture.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="28" selection-start="1226" selection-end="1226" vertical-scroll-proportion="0.74244124">
+        <state line="44" column="13" selection-start="1692" selection-end="1692" vertical-scroll-proportion="-3.940037">
           <folding />
         </state>
       </provider>

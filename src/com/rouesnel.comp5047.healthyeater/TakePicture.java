@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.util.AndroidRuntimeException;
 import android.view.*;
 import android.widget.*;
+import com.rouesnel.common.ui.HorizontalListView;
 
 import java.io.IOException;
 import java.lang.reflect.Method;
@@ -36,6 +37,8 @@ public class TakePicture extends Activity implements SurfaceHolder.Callback {
         Model.Picture p = pictures[position];
         ImageView image = (ImageView) v.findViewById(R.side_image_view.image);
         image.setImageBitmap(p.getBitmap());
+        TextView time = (TextView) v.findViewById(R.side_image_view.time);
+        time.setText(p.getTimeAgo());
       }
 
       return v;
@@ -59,14 +62,20 @@ public class TakePicture extends Activity implements SurfaceHolder.Callback {
 
   private static int MINIMUM_PICTURE_EDGE_LENGTH = 1000;
 
+  private SurfaceView previewSurfaceView;
   private SurfaceHolder previewSurface;
   private Camera camera;
-  private ImageView primaryImage;
-  private long primaryImageId = -1;
-  private GridView imageList;
+  private TextView noFoodText;
+  private HorizontalListView imageList;
   private boolean cameraPreviewing = false;
   private Model model;
   private List<Model.Picture> pictures;
+
+  private View.OnClickListener takePhotoListener = new View.OnClickListener() {
+      public void onClick(View view) {
+        camera.takePicture(null, null, new CameraCallback());
+      }
+    };
 
   /**
    * Called when the activity is first created.
@@ -77,9 +86,10 @@ public class TakePicture extends Activity implements SurfaceHolder.Callback {
     setContentView(R.layout.take_picture);
 
     // Setup control bindings.
-    previewSurface = ((SurfaceView) findViewById(R.camera.surface)).getHolder();
-    primaryImage = (ImageView) findViewById(R.camera.primaryImage);
-    imageList = (GridView) findViewById(R.camera.previousPhotos);
+    previewSurfaceView = (SurfaceView) findViewById(R.camera.surface);
+    previewSurface = previewSurfaceView.getHolder();
+    imageList = (HorizontalListView) findViewById(R.camera.pictureGallery);
+    noFoodText = (TextView) findViewById(R.camera.noFoodText);
 
     // Setup the camera surface.
     previewSurface.addCallback(this);
@@ -88,22 +98,7 @@ public class TakePicture extends Activity implements SurfaceHolder.Callback {
     // open the database.
     model = new Model(this);
 
-    Button takePhoto = (Button) findViewById(R.camera.takePhoto);
-    takePhoto.setOnClickListener(new View.OnClickListener() {
-      public void onClick(View view) {
-        camera.takePicture(null, null, new CameraCallback());
-      }
-    });
-
-    primaryImage.setOnClickListener(new View.OnClickListener() {
-      public void onClick(View view) {
-        if (primaryImageId != -1) {
-          Intent intent = new Intent(TakePicture.this, ViewPicture.class);
-          intent.putExtra(PHOTO_ID, primaryImageId);
-          startActivity(intent);
-        }
-      }
-    });
+    previewSurfaceView.setOnClickListener(takePhotoListener);
 
     imageList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
       public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
@@ -138,26 +133,17 @@ public class TakePicture extends Activity implements SurfaceHolder.Callback {
     pictures = model.getTodaysPictures();
     model.close();
 
-    // initialize the display.
-    if (pictures.size() > 0) {
-      primaryImage.setImageBitmap(pictures.get(0).getBitmap());
-      primaryImageId = pictures.get(0).getId();
-    } else {
-      primaryImageId = -1;
-      primaryImage.setImageBitmap(null);
-    }
 
     // slice the image list
-    if (pictures.size() > 1) {
-      List<Model.Picture> otherPictures = pictures.subList(1,
-          pictures.size());
+    if (pictures.size() > 0) {
 
       imageList.setAdapter(new PictureAdapter(this, 0,
-          otherPictures.toArray(new Model.Picture[0])));
-
+          pictures.toArray(new Model.Picture[0])));
+      noFoodText.setVisibility(View.INVISIBLE);
     } else {
       imageList.setAdapter(new PictureAdapter(this, 0,
           new Model.Picture[0]));
+      noFoodText.setVisibility(View.VISIBLE);
     }
   }
 
