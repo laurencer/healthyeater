@@ -6,71 +6,93 @@
               android:background="@drawable/light_pattern"
     >
 
-  <FrameLayout
+  <LinearLayout
       android:layout_width="fill_parent"
       android:layout_height="45dp"
       android:background="@drawable/navigation_background"
       >
 
     <TextView
-        android:layout_width="fill_parent"
+        android:layout_width="wrap_content"
         android:layout_height="fill_parent"
         android:text="Food Journal (Today)"
         android:gravity="center"
+        android:paddingLeft="10dp"
         android:textStyle="bold"
         android:textColor="@android:color/white"
-        android:textSize="20sp"
+        android:textSize="18sp"
         />
+    <FrameLayout
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:gravity="center_vertical"
+      android:padding="3dp"
+      android:layout_gravity="right"
+      >
+    <Button
+      android:layout_width="wrap_content"
+      android:layout_height="fill_parent"
+      android:gravity="center"
+      android:layout_gravity="right|center_vertical"
+      android:text="Review"
+      />
+    </FrameLayout>
 
-  </FrameLayout>
+  </LinearLayout>
 
   <ImageView
-    android:layout_width="fill_parent"
-    android:layout_height="wrap_content"
-    android:src="@drawable/navigation_border_top"
-    android:scaleType="fitXY"
-    />
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:src="@drawable/navigation_border_top"
+      android:scaleType="fitXY"
+      />
 
   <RelativeLayout
       android:layout_width="fill_parent"
       android:layout_height="140dp"
       android:background="@drawable/dark_pattern"
       >
-    <com.rouesnel.common.ui.HorizontalListView
-        android:id="@+camera/pictureGallery"
-        android:orientation="horizontal"
-        android:layout_gravity="center"
-        
+    <FrameLayout
         android:layout_width="fill_parent"
-        android:layout_height="140dp"
+        android:layout_height="wrap_content"
         android:paddingLeft="8dp"
         android:paddingTop="8dp"
+        >
+      <HorizontalScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
         android:background="@android:color/transparent"
-        />
+        >
+        <LinearLayout
+          android:id="@+camera/pictureGallery"
+          android:orientation="horizontal"
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:background="@android:color/transparent" />
+
+        </HorizontalScrollView>
+
+    </FrameLayout>
 
     <TextView
-      android:layout_width="fill_parent"
-      android:layout_height="fill_parent"
-      android:gravity="center"
-      android:textColor="@android:color/white"
-      android:id="@+camera/noFoodText"
-      android:text="You haven't eaten anything today."
-      android:textSize="18sp"
-      android:shadowColor="#000000"
-      android:shadowDx="0"
-      android:shadowDy="0"
-      android:shadowRadius="2"
-      android:visibility="invisible"
-      />
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center"
+        android:textColor="@android:color/black"
+        android:id="@+camera/noFoodText"
+        android:text="You haven't eaten anything today."
+        android:textSize="18sp"
+        android:visibility="invisible"
+        />
 
   </RelativeLayout>
 
   <ImageView
-    android:layout_width="fill_parent"
-    android:layout_height="wrap_content"
-    android:src="@drawable/navigation_border_bottom"
-    android:scaleType="fitXY"
-    />
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:src="@drawable/navigation_border_bottom"
+      android:scaleType="fitXY"
+      />
 
   <LinearLayout
       android:layout_width="fill_parent"

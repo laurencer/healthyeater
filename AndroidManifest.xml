@@ -22,6 +22,7 @@
         </activity>
       <activity android:name=".ReviewPicture"
           android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" />
-      <activity android:name=".ViewPicture"/>
+      <activity android:name=".ViewPicture"
+          android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" />
     </application>
 </manifest> 

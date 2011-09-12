@@ -9,42 +9,12 @@ import android.os.Bundle;
 import android.util.AndroidRuntimeException;
 import android.view.*;
 import android.widget.*;
-import com.rouesnel.common.ui.HorizontalListView;
 
 import java.io.IOException;
 import java.lang.reflect.Method;
 import java.util.List;
 
 public class TakePicture extends Activity implements SurfaceHolder.Callback {
-
-  private class PictureAdapter extends ArrayAdapter<Model.Picture> {
-
-    private Model.Picture[] pictures;
-
-    public PictureAdapter(Context context, int textViewResourceId, Model.Picture[] objects) {
-      super(context, textViewResourceId, objects);
-      this.pictures = objects;
-    }
-
-    @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
-      View v = convertView;
-      if (v == null) {
-        LayoutInflater vi = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        v = vi.inflate(R.layout.side_image_view, null);
-      }
-      if (position < pictures.length) {
-        Model.Picture p = pictures[position];
-        ImageView image = (ImageView) v.findViewById(R.side_image_view.image);
-        image.setImageBitmap(p.getBitmap());
-        TextView time = (TextView) v.findViewById(R.side_image_view.time);
-        time.setText(p.getTimeAgo());
-      }
-
-      return v;
-    }
-
-  }
 
   private class CameraCallback implements Camera.PictureCallback {
     public void onPictureTaken(byte[] bytes, Camera camera) {
@@ -58,6 +28,21 @@ public class TakePicture extends Activity implements SurfaceHolder.Callback {
     }
   }
 
+  private class OpenImageOnClick implements View.OnClickListener {
+    private final long id;
+
+    public OpenImageOnClick(long id) {
+      this.id = id;
+    }
+
+    @Override
+    public void onClick(View view) {
+      Intent intent = new Intent(TakePicture.this, ViewPicture.class);
+      intent.putExtra(PHOTO_ID, id);
+      startActivity(intent);
+    }
+  }
+
   public static String PHOTO_ID = "photoId";
 
   private static int MINIMUM_PICTURE_EDGE_LENGTH = 1000;
@@ -66,7 +51,7 @@ public class TakePicture extends Activity implements SurfaceHolder.Callback {
   private SurfaceHolder previewSurface;
   private Camera camera;
   private TextView noFoodText;
-  private HorizontalListView imageList;
+  private LinearLayout imageList;
   private boolean cameraPreviewing = false;
   private Model model;
   private List<Model.Picture> pictures;
@@ -88,7 +73,7 @@ public class TakePicture extends Activity implements SurfaceHolder.Callback {
     // Setup control bindings.
     previewSurfaceView = (SurfaceView) findViewById(R.camera.surface);
     previewSurface = previewSurfaceView.getHolder();
-    imageList = (HorizontalListView) findViewById(R.camera.pictureGallery);
+    imageList = (LinearLayout) findViewById(R.camera.pictureGallery);
     noFoodText = (TextView) findViewById(R.camera.noFoodText);
 
     // Setup the camera surface.
@@ -99,16 +84,6 @@ public class TakePicture extends Activity implements SurfaceHolder.Callback {
     model = new Model(this);
 
     previewSurfaceView.setOnClickListener(takePhotoListener);
-
-    imageList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-      public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-        Model.Picture picture = (Model.Picture)adapterView.getItemAtPosition
-            (i);
-        Intent intent = new Intent(TakePicture.this, ViewPicture.class);
-        intent.putExtra(PHOTO_ID, picture.getId());
-        startActivity(intent);
-      }
-    });
   }
 
   @Override
@@ -133,16 +108,23 @@ public class TakePicture extends Activity implements SurfaceHolder.Callback {
     pictures = model.getTodaysPictures();
     model.close();
 
+    imageList.removeAllViews();
 
     // slice the image list
     if (pictures.size() > 0) {
-
-      imageList.setAdapter(new PictureAdapter(this, 0,
-          pictures.toArray(new Model.Picture[0])));
       noFoodText.setVisibility(View.INVISIBLE);
+      LayoutInflater vi = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+      for (Model.Picture p : pictures) {
+        View v = vi.inflate(R.layout.side_image_view, null);
+        ImageView image = (ImageView) v.findViewById(R.side_image_view.image);
+        image.setImageBitmap(p.getBitmap());
+        TextView time = (TextView) v.findViewById(R.side_image_view.time);
+        time.setText(p.getTimeAgo());
+        v.setOnClickListener(new OpenImageOnClick(p.getId()));
+        imageList.addView(v);
+      }
     } else {
-      imageList.setAdapter(new PictureAdapter(this, 0,
-          new Model.Picture[0]));
+
       noFoodText.setVisibility(View.VISIBLE);
     }
   }
@@ -164,9 +146,16 @@ public class TakePicture extends Activity implements SurfaceHolder.Callback {
 
     Camera.Parameters parameters = camera.getParameters();
     parameters.setPreviewSize(h, w);
-    parameters.setPictureSize(MINIMUM_PICTURE_EDGE_LENGTH, MINIMUM_PICTURE_EDGE_LENGTH);
-    camera.setParameters(parameters);
 
+    for (Camera.Size size : parameters.getSupportedPictureSizes()) {
+      parameters.setPictureSize(size.width, size.height);
+      if (size.width > size.height && size.height >
+          MINIMUM_PICTURE_EDGE_LENGTH) {
+        break;
+      }
+    }
+
+    camera.setParameters(parameters);
     setDisplayOrientation(camera, 90);
 
     camera.startPreview();

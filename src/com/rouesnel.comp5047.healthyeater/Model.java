@@ -8,6 +8,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.database.sqlite.SQLiteStatement;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.media.ExifInterface;
 import android.os.Environment;
 import android.text.format.DateUtils;
 import android.util.AndroidRuntimeException;
@@ -38,15 +39,15 @@ public class Model {
   private static final String FILE_EXTENSION = ".jpg";
 
   private class DatabaseOpener extends SQLiteOpenHelper {
-                  private static final int DATABASE_VERSION = 2;
+    private static final int DATABASE_VERSION = 2;
     private static final String DATABASE_NAME = "healthyeater";
 
     private static final String CREATE_TABLE_SQL =
-                "CREATE TABLE " + TABLE_NAME + " (" +
-                    DATE_TAKEN + " INTEGER, " +
-                    FILENAME + " STRING, " +
-                    DATE_RATED + " INTEGER, " +
-                    RATING + " STRING);";
+        "CREATE TABLE " + TABLE_NAME + " (" +
+            DATE_TAKEN + " INTEGER, " +
+            FILENAME + " STRING, " +
+            DATE_RATED + " INTEGER, " +
+            RATING + " STRING);";
 
     DatabaseOpener(Context context) {
       super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -55,13 +56,13 @@ public class Model {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL(CREATE_TABLE_SQL);
+      db.execSQL(CREATE_TABLE_SQL);
     }
 
-  @Override
-  public void onUpgrade(SQLiteDatabase sqLiteDatabase, int previousVersion,
-                        int currentVersion) {
-  }
+    @Override
+    public void onUpgrade(SQLiteDatabase sqLiteDatabase, int previousVersion,
+                          int currentVersion) {
+    }
 
   }
 
@@ -86,7 +87,7 @@ public class Model {
         FileInputStream stream = new FileInputStream(file);
 
         // Check we can fit the file in memory.
-        int length = (int)file.length();
+        int length = (int) file.length();
         if (file.length() > Integer.MAX_VALUE) {
           throw new AndroidRuntimeException("Image too large to load.");
         }
@@ -204,7 +205,7 @@ public class Model {
   }
 
   public List<Picture> getTodaysPictures() {
-    Cursor c = db.query(TABLE_NAME, new String[] { ROWID },
+    Cursor c = db.query(TABLE_NAME, new String[]{ROWID},
         DATE_TAKEN + " > " + getToday(), null, null, null,
         DATE_TAKEN + " desc");
 
@@ -212,7 +213,7 @@ public class Model {
     while (c.moveToNext()) {
       pictures.add(new Picture(this, c.getLong(0)));
     }
-    
+
     c.close();
     return pictures;
   }
@@ -232,7 +233,15 @@ public class Model {
     } catch (IOException ex) {
       throw new AndroidRuntimeException(ex);
     }
-    
+
+    try {
+      ExifInterface exif = new ExifInterface(file.getPath());
+      String exifOrientation = exif.getAttribute(ExifInterface.TAG_ORIENTATION);
+    } catch (Exception e) {
+
+    }
+
+
     return id;
   }
 
@@ -241,7 +250,7 @@ public class Model {
   }
 
   public String getPictureRating(long pictureId) {
-    Cursor c = db.query(TABLE_NAME, new String[] { RATING },
+    Cursor c = db.query(TABLE_NAME, new String[]{RATING},
         ROWID + "=" + pictureId, null, null, null,
         null, "1");
 
@@ -257,7 +266,7 @@ public class Model {
   }
 
   public Date getPictureTime(long id) {
-    Cursor c = db.query(TABLE_NAME, new String[] { DATE_TAKEN },
+    Cursor c = db.query(TABLE_NAME, new String[]{DATE_TAKEN},
         ROWID + "=" + id, null, null, null,
         null, "1");
 
