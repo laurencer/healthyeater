@@ -11,9 +11,14 @@ public final class R {
     public static final class attr {
     }
     public static final class camera {
-        public static final int noFoodText=0x7f070001;
-        public static final int pictureGallery=0x7f070000;
-        public static final int surface=0x7f070002;
+        public static final int noFoodText=0x7f080002;
+        public static final int pictureGallery=0x7f080001;
+        public static final int surface=0x7f080003;
+        public static final int viewGallery=0x7f080000;
+    }
+    public static final class dayView {
+        public static final int images=0x7f050001;
+        public static final int title=0x7f050000;
     }
     public static final class drawable {
         public static final int dark_pattern=0x7f020000;
@@ -24,32 +29,37 @@ public final class R {
         public static final int navigation_border_top=0x7f020005;
     }
     public static final class layout {
-        public static final int review_picture=0x7f030000;
-        public static final int side_image_view=0x7f030001;
-        public static final int take_picture=0x7f030002;
-        public static final int view_picture=0x7f030003;
+        public static final int day_view=0x7f030000;
+        public static final int review_picture=0x7f030001;
+        public static final int side_image_view=0x7f030002;
+        public static final int take_picture=0x7f030003;
+        public static final int view_gallery=0x7f030004;
+        public static final int view_picture=0x7f030005;
     }
     public static final class photoReview {
-        public static final int bored=0x7f050005;
-        public static final int hungry=0x7f050003;
-        public static final int imageView=0x7f050000;
-        public static final int preemptive=0x7f050004;
-        public static final int rating=0x7f050001;
-        public static final int retake=0x7f050002;
-        public static final int tired=0x7f050006;
+        public static final int bored=0x7f060005;
+        public static final int hungry=0x7f060003;
+        public static final int imageView=0x7f060000;
+        public static final int preemptive=0x7f060004;
+        public static final int rating=0x7f060001;
+        public static final int retake=0x7f060002;
+        public static final int tired=0x7f060006;
     }
     public static final class side_image_view {
-        public static final int image=0x7f060000;
-        public static final int time=0x7f060001;
+        public static final int image=0x7f070000;
+        public static final int time=0x7f070001;
     }
     public static final class string {
         public static final int app_name=0x7f040000;
     }
+    public static final class viewGallery {
+        public static final int dayViews=0x7f090000;
+    }
     public static final class viewPicture {
-        public static final int delete=0x7f080003;
-        public static final int imageView=0x7f080000;
-        public static final int rating=0x7f080002;
-        public static final int share=0x7f080004;
-        public static final int time=0x7f080001;
+        public static final int delete=0x7f0a0003;
+        public static final int imageView=0x7f0a0000;
+        public static final int rating=0x7f0a0002;
+        public static final int share=0x7f0a0004;
+        public static final int time=0x7f0a0001;
     }
 }

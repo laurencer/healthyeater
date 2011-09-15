@@ -18,6 +18,7 @@ import android.widget.RatingBar;
 import java.io.*;
 import java.sql.Time;
 import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -32,11 +33,14 @@ public class Model {
 
   private static final String TABLE_NAME = "pictures";
   private static final String DATE_TAKEN = "date_taken";
+  private static final String DAY_TAKEN = "day_taken";
   private static final String DATE_RATED = "date_rated";
   private static final String FILENAME = "photo_data";
   private static final String RATING = "rating";
   private static final String ROWID = "ROWID";
   private static final String FILE_EXTENSION = ".jpg";
+
+  private static final long MILLISECONDS_IN_DAY = 86400000;
 
   private class DatabaseOpener extends SQLiteOpenHelper {
     private static final int DATABASE_VERSION = 2;
@@ -45,6 +49,7 @@ public class Model {
     private static final String CREATE_TABLE_SQL =
         "CREATE TABLE " + TABLE_NAME + " (" +
             DATE_TAKEN + " INTEGER, " +
+            DAY_TAKEN + " INTEGER, " +
             FILENAME + " STRING, " +
             DATE_RATED + " INTEGER, " +
             RATING + " STRING);";
@@ -169,6 +174,30 @@ public class Model {
     }
   }
 
+  public class Day {
+    private final Model db;
+    private final long time;
+    private final Date date;
+
+    public Day(Model db, long time) {
+      this.db = db;
+      this.time = time;
+      this.date = new Date(time);
+    }
+
+    public List<Picture> getPictures() {
+      db.open();
+      List<Picture> pictures = db.getPicturesForDay(time);
+      db.close();
+      return pictures;
+    }
+
+    public String getDayString() {
+      return new SimpleDateFormat("EEEE d, MMMM").format(date);
+    }
+
+  }
+
   private SQLiteDatabase db;
   private Context context;
 
@@ -199,14 +228,16 @@ public class Model {
 
   private long getToday() {
     Date today = new Date();
-    today.setHours(0);
-    today.setMinutes(0);
-    return today.getTime();
+    return today.getTime() - (today.getTime() % MILLISECONDS_IN_DAY);
   }
 
   public List<Picture> getTodaysPictures() {
-    Cursor c = db.query(TABLE_NAME, new String[]{ROWID},
-        DATE_TAKEN + " > " + getToday(), null, null, null,
+    return getPicturesForDay(getToday());
+  }
+
+  public List<Picture> getPicturesForDay(long day) {
+     Cursor c = db.query(TABLE_NAME, new String[]{ROWID},
+        DAY_TAKEN + " = " + day, null, null, null,
         DATE_TAKEN + " desc");
 
     List<Picture> pictures = new ArrayList<Picture>();
@@ -221,6 +252,7 @@ public class Model {
   public long storePicture(byte[] jpegData) {
     ContentValues rowData = new ContentValues();
     rowData.put(DATE_TAKEN, new Date().getTime());
+    rowData.put(DAY_TAKEN, getToday());
     long id = db.insert(TABLE_NAME, null, rowData);
 
     // Save the photo in external storage.
@@ -274,6 +306,19 @@ public class Model {
 
     long time = c.getLong(0);
     return new Date(time);
+  }
+
+  public List<Day> getDays() {
+    Cursor c = db.rawQuery("SELECT DISTINCT " + DAY_TAKEN + " FROM " +
+        TABLE_NAME + " ORDER BY " + DAY_TAKEN + " DESC", null);
+
+    List<Day> days = new ArrayList<Day>();
+
+    while (c.moveToNext()) {
+      days.add(new Day(this, c.getLong(0)));
+    }
+
+    return days;
   }
 
   public long ratePicture(long pictureId, String rating) {

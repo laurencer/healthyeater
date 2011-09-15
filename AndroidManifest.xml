@@ -24,5 +24,7 @@
           android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" />
       <activity android:name=".ViewPicture"
           android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" />
+      <activity android:name=".ViewGallery"
+          android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" />
     </application>
 </manifest> 

@@ -30,11 +30,12 @@
       android:layout_gravity="right"
       >
     <Button
+      android:id="@+camera/viewGallery"
       android:layout_width="wrap_content"
       android:layout_height="fill_parent"
       android:gravity="center"
       android:layout_gravity="right|center_vertical"
-      android:text="Review"
+      android:text="Gallery"
       />
     </FrameLayout>
 

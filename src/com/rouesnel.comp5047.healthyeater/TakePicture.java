@@ -55,6 +55,7 @@ public class TakePicture extends Activity implements SurfaceHolder.Callback {
   private boolean cameraPreviewing = false;
   private Model model;
   private List<Model.Picture> pictures;
+  private Button viewGallery;
 
   private View.OnClickListener takePhotoListener = new View.OnClickListener() {
       public void onClick(View view) {
@@ -75,6 +76,7 @@ public class TakePicture extends Activity implements SurfaceHolder.Callback {
     previewSurface = previewSurfaceView.getHolder();
     imageList = (LinearLayout) findViewById(R.camera.pictureGallery);
     noFoodText = (TextView) findViewById(R.camera.noFoodText);
+    viewGallery = (Button) findViewById(R.camera.viewGallery);
 
     // Setup the camera surface.
     previewSurface.addCallback(this);
@@ -84,6 +86,14 @@ public class TakePicture extends Activity implements SurfaceHolder.Callback {
     model = new Model(this);
 
     previewSurfaceView.setOnClickListener(takePhotoListener);
+    viewGallery.setOnClickListener(new View.OnClickListener() {
+
+      @Override
+      public void onClick(View view) {
+        Intent intent = new Intent(TakePicture.this, ViewGallery.class);
+        startActivity(intent);
+      }
+    });
   }
 
   @Override
