@@ -25,10 +25,9 @@
         android:textSize="18sp"
         />
   </FrameLayout>
-
-  <android.support.v4.view.ViewPager
-      android:id="@+viewGallery/dayViews"
-      android:layout_width="fill_parent"
-      android:layout_height="fill_parent"
-    />
+    <ListView
+        android:id="@android:id/list"
+        android:layout_height="fill_parent"
+        android:layout_width="fill_parent"
+        />
 </LinearLayout>

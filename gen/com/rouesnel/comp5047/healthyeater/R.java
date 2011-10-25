@@ -52,14 +52,11 @@ public final class R {
     public static final class string {
         public static final int app_name=0x7f040000;
     }
-    public static final class viewGallery {
-        public static final int dayViews=0x7f090000;
-    }
     public static final class viewPicture {
-        public static final int delete=0x7f0a0003;
-        public static final int imageView=0x7f0a0000;
-        public static final int rating=0x7f0a0002;
-        public static final int share=0x7f0a0004;
-        public static final int time=0x7f0a0001;
+        public static final int delete=0x7f090003;
+        public static final int imageView=0x7f090000;
+        public static final int rating=0x7f090002;
+        public static final int share=0x7f090004;
+        public static final int time=0x7f090001;
     }
 }

@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:layout_width="fill_parent"
-              android:layout_height="fill_parent"
+              android:orientation="vertical"
+              android:layout_width="wrap_content"
+              android:layout_height="320dp"
               android:padding="5dp">
   <TextView
     android:id="@+dayView/title"
@@ -12,10 +13,12 @@
     android:textColor="@android:color/black"
     />
 
-  <GridView
+  <LinearLayout
     android:id="@+dayView/images"
-    android:layout_height="fill_parent"
-    android:layout_width="fill_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    android:layout_height="wrap_content"
+    android:layout_width="320dp"
     />
 
 </LinearLayout>
