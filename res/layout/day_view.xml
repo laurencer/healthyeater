@@ -3,7 +3,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:orientation="vertical"
               android:layout_width="wrap_content"
-              android:layout_height="320dp"
+              android:layout_height="wrap_content"
               android:padding="5dp">
   <TextView
     android:id="@+dayView/title"
@@ -13,12 +13,14 @@
     android:textColor="@android:color/black"
     />
 
-  <LinearLayout
+  <TableLayout
     android:id="@+dayView/images"
+    android:layout_gravity="center_horizontal"
     android:orientation="vertical"
-    android:background="@android:color/white"
+    android:background="@android:color/transparent"
+    android:numColumns="auto_fit"
     android:layout_height="wrap_content"
-    android:layout_width="320dp"
+    android:layout_width="wrap_content"
     />
 
 </LinearLayout>

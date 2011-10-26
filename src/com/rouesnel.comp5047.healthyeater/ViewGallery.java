@@ -3,16 +3,19 @@ package com.rouesnel.comp5047.healthyeater;
 import android.app.Activity;
 import android.app.ListActivity;
 import android.content.Context;
+import android.content.Intent;
 import android.database.DataSetObserver;
 import android.os.Bundle;
 import android.os.Parcelable;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -22,6 +25,23 @@ import java.util.List;
  * Time: 9:20 AM
  */
 public class ViewGallery extends ListActivity {
+
+    private class PictureClickListener implements View.OnClickListener {
+
+        long id;
+
+        public PictureClickListener(long id) {
+            this.id = id;
+        }
+
+        @Override
+        public void onClick(View view) {
+            Intent i = new Intent(ViewGallery.this, ViewPicture.class);
+            i.putExtra(TakePicture.PHOTO_ID, id);
+
+            startActivity(i);
+        }
+    }
 
     private class PictureAdapter extends ArrayAdapter<Model.Picture> {
 
@@ -42,7 +62,7 @@ public class ViewGallery extends ListActivity {
             if (position < pictures.length) {
                 Model.Picture p = pictures[position];
                 ImageView image = (ImageView) v.findViewById(R.side_image_view.image);
-                image.setImageBitmap(p.getBitmap());
+                image.setImageBitmap(p.getThumbnail());
                 TextView time = (TextView) v.findViewById(R.side_image_view.time);
                 time.setText("");
             }
@@ -57,6 +77,7 @@ public class ViewGallery extends ListActivity {
         private final Model model;
         private final Context context;
         private List<Model.Day> days;
+        private List<DataSetObserver> observers = new ArrayList<DataSetObserver>();
 
         public DayAdapter(Context context) {
             this.context = context;
@@ -66,12 +87,22 @@ public class ViewGallery extends ListActivity {
             model.close();
         }
 
+        public void onModelUpdate() {
+            for (DataSetObserver observer : observers) {
+                observer.onChanged();
+            }
+        }
+
         @Override
         public void registerDataSetObserver(DataSetObserver dataSetObserver) {
+            observers.add(dataSetObserver);
         }
 
         @Override
         public void unregisterDataSetObserver(DataSetObserver dataSetObserver) {
+            if (observers.contains(dataSetObserver)) {
+                observers.remove(dataSetObserver);
+            }
         }
 
         @Override
@@ -118,30 +149,44 @@ public class ViewGallery extends ListActivity {
                 TextView title = (TextView) view.findViewById(R.dayView.title);
                 title.setText(day.getDayString());
 
-                LinearLayout images = (LinearLayout) view.findViewById(R.dayView.images);
+                TableLayout images = (TableLayout) view.findViewById(R.dayView.images);
 
-                // if we're relaying out a view we need to get rid of all existing images (otherwise we'll just be
-                // appending additional images to the end and doubling up).
+
+                PictureAdapter adapter = new PictureAdapter(context, 0,
+                        day.getPictures().toArray(new Model.Picture[0]));
+
+                // remove all existing pictures.
                 images.removeAllViews();
-                
-                List<Model.Picture> pictures = day.getPictures();
 
-                // this lays out all of the images in a single day.
-                for (int j = 0; j < pictures.size(); ++j) {
+                // add each picture manually in the table layout.
+                int columnNumber = 0;
+                TableRow row = new TableRow(context);
+                boolean rowAdded = false;
 
-                    // create a new view for the image.
-                    View v = vi.inflate(R.layout.side_image_view, null);
-                    
-                    // load the actual picture and bind all the ui elements to it.
-                    Model.Picture p = pictures.get(j);
-                    ImageView image = (ImageView) v.findViewById(R.side_image_view.image);
-                    image.setImageBitmap(p.getBitmap());
-                    TextView time = (TextView) v.findViewById(R.side_image_view.time);
-                    time.setText("");
+                for (int j = 0; j < adapter.getCount(); ++j) {
+                    View v = adapter.getView(j, null, images);
+                    v.setOnClickListener(new PictureClickListener(adapter.getItem(j).getId()));
 
-                    // add the completed view to the linearlayout.
-                    images.addView(v);
+                    // this section handles the logic dealing with creating tablerows with only two columns.
+
+                    row.addView(v);
+                    columnNumber++;
+                    rowAdded = false;
+
+                    if (columnNumber > 1) {
+                        images.addView(row);
+                        rowAdded = true;
+                        row = new TableRow(context);
+                        columnNumber = 0;
+                    }
+
                 }
+
+                if (rowAdded == false) {
+                    images.addView(row);
+                }
+
+
             }
 
             return view;
@@ -154,20 +199,31 @@ public class ViewGallery extends ListActivity {
 
         @Override
         public boolean areAllItemsEnabled() {
+            // prevents each item from being selectable/clickable (which is what we want).
             return false;
         }
 
         @Override
         public boolean isEnabled(int i) {
+            // prevents each item from being selectable/clickable (which is what we want).
             return false;
         }
+    }
+
+    DayAdapter adapter;
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        adapter.onModelUpdate();
     }
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.view_gallery);
 
-        setListAdapter(new DayAdapter(this));
+        adapter = new DayAdapter(this);
+        setListAdapter(adapter);
 
     }
 }

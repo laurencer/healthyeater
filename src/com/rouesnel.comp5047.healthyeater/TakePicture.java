@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.hardware.Camera;
 import android.os.Bundle;
 import android.util.AndroidRuntimeException;
@@ -127,7 +128,7 @@ public class TakePicture extends Activity implements SurfaceHolder.Callback {
       for (Model.Picture p : pictures) {
         View v = vi.inflate(R.layout.side_image_view, null);
         ImageView image = (ImageView) v.findViewById(R.side_image_view.image);
-        image.setImageBitmap(p.getBitmap());
+        image.setImageBitmap(p.getThumbnail());
         TextView time = (TextView) v.findViewById(R.side_image_view.time);
         time.setText(p.getTimeAgo());
         v.setOnClickListener(new OpenImageOnClick(p.getId()));

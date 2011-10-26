@@ -55,7 +55,7 @@ public class ReviewPicture extends Activity {
     ratingOptions.setOnCheckedChangeListener(onRatingChange);
 
     // Initialize the display and controls.
-    displayView.setImageBitmap(picture.getBitmap());
+    displayView.setImageBitmap(picture.getThumbnail());
 
   }
 

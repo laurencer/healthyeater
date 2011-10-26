@@ -105,11 +105,16 @@ public class Model {
         throw new AndroidRuntimeException(ex);
       }
     }
+      
+    public Bitmap getThumbnail() {
+        BitmapFactory.Options options = new BitmapFactory.Options();
+        // returns an image a quarter of the original size (this saves memory).
+        options.inSampleSize = 4;
+        return BitmapFactory.decodeFile(file.getAbsolutePath(), options);
+    }
 
     public Bitmap getBitmap() {
-      byte[] bytes = getBytes();
-      return BitmapFactory.decodeByteArray(bytes, 0,
-          bytes.length);
+      return BitmapFactory.decodeFile(file.getAbsolutePath());
     }
 
     public long getId() {

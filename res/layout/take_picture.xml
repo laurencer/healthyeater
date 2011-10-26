@@ -35,7 +35,7 @@
       android:layout_height="fill_parent"
       android:gravity="center"
       android:layout_gravity="right|center_vertical"
-      android:text="Gallery"
+      android:text="Food Gallery"
       />
     </FrameLayout>
 
