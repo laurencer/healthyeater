@@ -28,12 +28,11 @@
   <component name="ChangeListManager">
     <list default="true" id="0b2c6a14-8235-456f-a805-5113dc827657" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/day_view.xml" afterPath="$PROJECT_DIR$/res/layout/day_view.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/take_picture.xml" afterPath="$PROJECT_DIR$/res/layout/take_picture.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/rouesnel.comp5047.healthyeater/Model.java" afterPath="$PROJECT_DIR$/src/com/rouesnel.comp5047.healthyeater/Model.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/rouesnel.comp5047.healthyeater/ReviewPicture.java" afterPath="$PROJECT_DIR$/src/com/rouesnel.comp5047.healthyeater/ReviewPicture.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/rouesnel.comp5047.healthyeater/TakePicture.java" afterPath="$PROJECT_DIR$/src/com/rouesnel.comp5047.healthyeater/TakePicture.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/rouesnel.comp5047.healthyeater/ViewGallery.java" afterPath="$PROJECT_DIR$/src/com/rouesnel.comp5047.healthyeater/ViewGallery.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/rouesnel.comp5047.healthyeater/ViewPicture.java" afterPath="$PROJECT_DIR$/src/com/rouesnel.comp5047.healthyeater/ViewPicture.java" />
     </list>
     <ignored path="HealthyEater.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -100,31 +99,16 @@
       <file leaf-file-name="ViewGallery.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/rouesnel.comp5047.healthyeater/ViewGallery.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="194" column="17" selection-start="5703" selection-end="5703" vertical-scroll-proportion="0.0">
+            <state line="289" column="43" selection-start="9734" selection-end="9734" vertical-scroll-proportion="0.0">
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="imports" expanded="false" />
                 <element signature="class#PictureClickListener#0;class#ViewGallery#0" expanded="false" />
+                <element signature="docComment;class#PictureAdapter#0;class#ViewGallery#0" expanded="false" />
                 <element signature="class#PictureAdapter#0;class#ViewGallery#0" expanded="false" />
+                <element signature="docComment;method#DayAdapter#0;class#DayAdapter#0;class#ViewGallery#0" expanded="false" />
                 <element signature="method#DayAdapter#0;class#DayAdapter#0;class#ViewGallery#0" expanded="false" />
+                <element signature="docComment;method#onModelUpdate#0;class#DayAdapter#0;class#ViewGallery#0" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="take_picture.xml" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/res/layout/take_picture.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="30" selection-start="1201" selection-end="1201" vertical-scroll-proportion="-2.6086957">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TakePicture.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/rouesnel.comp5047.healthyeater/TakePicture.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="129" column="0" selection-start="3785" selection-end="3785" vertical-scroll-proportion="0.0">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -132,8 +116,10 @@
       <file leaf-file-name="ReviewPicture.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/rouesnel.comp5047.healthyeater/ReviewPicture.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="57" column="53" selection-start="1748" selection-end="1748" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="42" column="88" selection-start="1573" selection-end="1573" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -141,25 +127,7 @@
       <file leaf-file-name="ViewPicture.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/rouesnel.comp5047.healthyeater/ViewPicture.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="67" column="42" selection-start="2136" selection-end="2136" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="side_image_view.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/layout/side_image_view.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="42" selection-start="692" selection-end="692" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="day_view.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/layout/day_view.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="45" selection-start="596" selection-end="596" vertical-scroll-proportion="0.0">
+            <state line="51" column="113" selection-start="1621" selection-end="1621" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -174,11 +142,16 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Model.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Model.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/rouesnel.comp5047.healthyeater/Model.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="112" column="73" selection-start="3344" selection-end="3344" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="87" column="25" selection-start="2896" selection-end="2896" vertical-scroll-proportion="0.24124514">
+              <folding>
+                <element signature="class#Picture#0;class#Model#0" expanded="false" />
+                <element signature="method#Picture#0;class#Picture#0;class#Model#0" expanded="false" />
+                <element signature="method#getFile#0;class#Picture#0;class#Model#0" expanded="false" />
+                <element signature="method#getBytes#0;class#Picture#0;class#Model#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -207,17 +180,17 @@
         <option value="$PROJECT_DIR$/src/com/rouesnel/common.ui/HorizontalListView.java" />
         <option value="$PROJECT_DIR$/res/layout/side_image_view.xml" />
         <option value="$PROJECT_DIR$/res/layout/action_button.xml" />
-        <option value="$PROJECT_DIR$/src/com/rouesnel.comp5047.healthyeater/ViewPicture.java" />
         <option value="$PROJECT_DIR$/res/layout/review_picture.xml" />
         <option value="$PROJECT_DIR$/res/layout/view_picture.xml" />
         <option value="$PROJECT_DIR$/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/res/layout/view_gallery.xml" />
         <option value="$PROJECT_DIR$/src/com/rouesnel.comp5047.healthyeater/TakePicture.java" />
-        <option value="$PROJECT_DIR$/src/com/rouesnel.comp5047.healthyeater/ReviewPicture.java" />
-        <option value="$PROJECT_DIR$/src/com/rouesnel.comp5047.healthyeater/Model.java" />
         <option value="$PROJECT_DIR$/res/layout/day_view.xml" />
-        <option value="$PROJECT_DIR$/src/com/rouesnel.comp5047.healthyeater/ViewGallery.java" />
         <option value="$PROJECT_DIR$/res/layout/take_picture.xml" />
+        <option value="$PROJECT_DIR$/src/com/rouesnel.comp5047.healthyeater/ViewGallery.java" />
+        <option value="$PROJECT_DIR$/src/com/rouesnel.comp5047.healthyeater/ReviewPicture.java" />
+        <option value="$PROJECT_DIR$/src/com/rouesnel.comp5047.healthyeater/ViewPicture.java" />
+        <option value="$PROJECT_DIR$/src/com/rouesnel.comp5047.healthyeater/Model.java" />
       </list>
     </option>
   </component>
@@ -239,9 +212,8 @@
     <option name="LAST_EDITED_TAB_NAME" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="35" />
     <option name="width" value="1440" />
-    <option name="height" value="801" />
+    <option name="height" value="922" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -287,7 +259,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -359,21 +330,22 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Favorites" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="project.structure.last.edited" value="Modules" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="115" />
-    <property name="OverrideImplement.combined" value="true" />
-    <property name="project.structure.proportion" value="0.15" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="133" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="OverrideImplement.combined" value="true" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="Repository.Attach.JavaDocs" value="false" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="130" />
-    <property name="recentsLimit" value="5" />
-    <property name="MemberChooser.sorted" value="false" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
+    <property name="MemberChooser.sorted" value="false" />
+    <property name="recentsLimit" value="5" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="130" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="135" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="804" />
@@ -388,10 +360,10 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="Downloaded.Files.Path" value="C:\Users\Laurence Rouesnel\workspace\HealthyEater\lib" />
     <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
+    <property name="Downloaded.Files.Path" value="C:\Users\Laurence Rouesnel\workspace\HealthyEater\lib" />
     <property name="GoToFile.includeJavaFiles" value="false" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
@@ -605,30 +577,30 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="35" width="1440" height="801" extended-state="0" />
+    <frame x="0" y="0" width="1440" height="922" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3297414" sideWeight="0.70692194" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297414" sideWeight="0.70692194" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="JavaRebel Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="SBT Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32941177" sideWeight="0.0" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29307806" sideWeight="0.75359195" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="SBT Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32875" sideWeight="0.0" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2925" sideWeight="0.74930555" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295082" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977968" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="JavaRebel" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3328424" sideWeight="0.48563218" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3325" sideWeight="0.48563218" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295082" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19109195" sideWeight="0.70692194" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19037357" sideWeight="0.6675" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18703976" sideWeight="0.3218391" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Android Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29307806" sideWeight="0.24066092" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Android Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2925" sideWeight="0.24513888" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Phing Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295082" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -672,7 +644,7 @@
     <option name="INCLUDE_TEXT_INTO_PATCH" value="false" />
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed the gallery view bug - turned out to be setting the orientation of a linearlayout wrong (or in this case not setting it so it defaulted to horizontal and ended up off-screen). I've changed a bit of the code in an experimental effort to find out the problem - so I'll now change it back in the next commit.&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added additional comments." />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -690,6 +662,7 @@
     <MESSAGE value="restyled more of the interface. made it look much nicer and consistent.&#10;&#10;added sharing functionality." />
     <MESSAGE value="restyled more of the interface. made it look much nicer and consistent.&#10;added sharing functionality.&#10;changed the view of existing pictures on the main screen - might need &#10;performance tuning later on.&#10;" />
     <MESSAGE value="fixed the gallery view bug - turned out to be setting the orientation of a linearlayout wrong (or in this case not setting it so it defaulted to horizontal and ended up off-screen). I've changed a bit of the code in an experimental effort to find out the problem - so I'll now change it back in the next commit.&#10;" />
+    <MESSAGE value="Added additional comments." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -721,90 +694,90 @@
     </entry>
     <entry file="jar://$PROJECT_DIR$/../android-sdk-mac_x86/platforms/android-10/android.jar!/android/widget/AbsListView.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="66" selection-start="1760" selection-end="1760" vertical-scroll-proportion="0.96452326">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/side_image_view.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="42" selection-start="692" selection-end="692" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="32" column="66" selection-start="1760" selection-end="1760" vertical-scroll-proportion="0.96452326" />
       </provider>
     </entry>
     <entry file="jar://$PROJECT_DIR$/../android-sdk-mac_x86/platforms/android-10/android.jar!/android/widget/Adapter.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="9" selection-start="253" selection-end="253" vertical-scroll-proportion="0.27842227">
-          <folding />
-        </state>
+        <state line="9" column="9" selection-start="253" selection-end="253" vertical-scroll-proportion="0.27842227" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/side_image_view.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="42" selection-start="692" selection-end="692" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/view_gallery.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="13" selection-start="874" selection-end="882" vertical-scroll-proportion="0.0">
+        <state line="27" column="13" selection-start="874" selection-end="882" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/day_view.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="45" selection-start="596" selection-end="596" vertical-scroll-proportion="0.33954728">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/rouesnel.comp5047.healthyeater/TakePicture.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="129" column="0" selection-start="3785" selection-end="3785" vertical-scroll-proportion="0.0">
+        <state line="129" column="0" selection-start="3785" selection-end="3785" vertical-scroll-proportion="0.019455252">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/rouesnel.comp5047.healthyeater/ViewPicture.java">
+    <entry file="file://$PROJECT_DIR$/res/layout/take_picture.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="67" column="42" selection-start="2136" selection-end="2136" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/rouesnel.comp5047.healthyeater/ReviewPicture.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="53" selection-start="1748" selection-end="1748" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/rouesnel.comp5047.healthyeater/Model.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="112" column="73" selection-start="3344" selection-end="3344" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/day_view.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="45" selection-start="596" selection-end="596" vertical-scroll-proportion="0.0">
+        <state line="53" column="49" selection-start="1672" selection-end="1672" vertical-scroll-proportion="0.379494">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/rouesnel.comp5047.healthyeater/ViewGallery.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="194" column="17" selection-start="5703" selection-end="5703" vertical-scroll-proportion="0.0">
+        <state line="289" column="43" selection-start="9734" selection-end="9734" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
             <element signature="class#PictureClickListener#0;class#ViewGallery#0" expanded="false" />
+            <element signature="docComment;class#PictureAdapter#0;class#ViewGallery#0" expanded="false" />
             <element signature="class#PictureAdapter#0;class#ViewGallery#0" expanded="false" />
+            <element signature="docComment;method#DayAdapter#0;class#DayAdapter#0;class#ViewGallery#0" expanded="false" />
             <element signature="method#DayAdapter#0;class#DayAdapter#0;class#ViewGallery#0" expanded="false" />
+            <element signature="docComment;method#onModelUpdate#0;class#DayAdapter#0;class#ViewGallery#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/take_picture.xml">
+    <entry file="file://$PROJECT_DIR$/src/com/rouesnel.comp5047.healthyeater/ReviewPicture.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="30" selection-start="1201" selection-end="1201" vertical-scroll-proportion="-2.6086957">
+        <state line="42" column="88" selection-start="1573" selection-end="1573" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/rouesnel.comp5047.healthyeater/ViewPicture.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="51" column="113" selection-start="1621" selection-end="1621" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/rouesnel.comp5047.healthyeater/Model.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="87" column="25" selection-start="2896" selection-end="2896" vertical-scroll-proportion="0.24124514">
+          <folding>
+            <element signature="class#Picture#0;class#Model#0" expanded="false" />
+            <element signature="method#Picture#0;class#Picture#0;class#Model#0" expanded="false" />
+            <element signature="method#getFile#0;class#Picture#0;class#Model#0" expanded="false" />
+            <element signature="method#getBytes#0;class#Picture#0;class#Model#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
